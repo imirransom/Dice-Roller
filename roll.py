@@ -7,18 +7,16 @@ import random
 # roll 3 - produce three numbers and print them.
 #
 
-random_number1 = random.randint(1, 7)
-random_number2 = random.randint(1, 7)
-random_number3 = random.randint(1, 7)
-random_number4 = random.randint(1, 7)
+random_number1 = random.randint(1, 6)
+random_number2 = random.randint(1, 6)
+random_number3 = random.randint(1, 6)
 
 def user_input():
     return input("Please choose how many times you would like to roll the dice:\n1.\n2.\n3.\n")
 
 def dice():
-    user_input()
-    roll_dice = user_input()
     while True:
+        roll_dice = user_input()
         if roll_dice == "1":
             print(f"Here is your dice roll: {random_number1}")
             break
@@ -29,8 +27,7 @@ def dice():
             print(f"Your first roll: {random_number1}\nSecond Roll: {random_number2}\nThird Roll: {random_number3}")
             break
         else:
-            print("Wrong selection, please choose how many times you want to roll the dice.")
-            continue
+            print("Wrong selection.")
 
 dice()
 
