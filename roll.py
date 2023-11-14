@@ -12,8 +12,25 @@ random_number2 = random.randint(1, 7)
 random_number3 = random.randint(1, 7)
 random_number4 = random.randint(1, 7)
 
-def dice(roll_dice):
-    if roll_dice == 1:
-        print(f"Here is your dice roll: {random_number1}")
-    elif roll_dice == 2:
-        print(f"Here's")
+def user_input():
+    return input("Please choose how many times you would like to roll the dice:\n1.\n2.\n3.\n")
+
+def dice():
+    user_input()
+    roll_dice = user_input()
+    while True:
+        if roll_dice == "1":
+            print(f"Here is your dice roll: {random_number1}")
+            break
+        elif roll_dice == "2":
+            print(f"Here's you first roll: {random_number1}\nAnd your second roll: {random_number2}")
+            break
+        elif roll_dice == '3':
+            print(f"Your first roll: {random_number1}\nSecond Roll: {random_number2}\nThird Roll: {random_number3}")
+            break
+        else:
+            print("Wrong selection, please choose how many times you want to roll the dice.")
+            continue
+
+dice()
+
